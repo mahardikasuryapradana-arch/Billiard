@@ -1,78 +1,58 @@
-/* General */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin:0;
-    padding:0;
-    line-height:1.6;
-    color:#333;
-    transition: background 0.3s, color 0.3s;
-}
-.container { width:90%; margin:auto; }
-a { text-decoration:none; }
-
-/* Dark Mode */
-body.dark-mode {
-    background:#121212;
-    color:#fff;
-}
-body.dark-mode header, body.dark-mode footer { background:#1e1e1e; }
-body.dark-mode .service-item { border-color:#444; }
-
-/* Header */
-header {
-    background:#222;
-    color:#fff;
-    padding:20px 0;
-}
-header .container { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
-header nav ul { list-style:none; display:flex; gap:20px; flex-wrap:wrap; padding:0; margin:0; }
-header nav ul li a { color:#fff; transition:0.3s; }
-header nav ul li a:hover { color:#ff4500; }
-
-/* Dark Mode Toggle */
-#darkModeToggle {
-    position:fixed; top:20px; right:20px; padding:10px;
-    background:#ff4500; color:#fff; border:none; border-radius:50%; cursor:pointer;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    margin: 0;
+    padding: 0;
 }
 
-/* Hero */
-.hero { background:url('images/hero.jpg') no-repeat center center/cover; height:400px; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; }
-.hero .btn { display:inline-block; padding:10px 20px; background:#ff4500; color:#fff; border-radius:5px; transition:0.3s; }
-.hero .btn:hover { background:#e03e00; }
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #0d1b2a;
+}
 
-/* Sections */
-section { padding:60px 20px; text-align:center; }
-section h2 { margin-bottom:20px; }
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
-/* Services */
-.service-items { display:flex; justify-content:center; gap:30px; flex-wrap:wrap; }
-.service-item { border:1px solid #ccc; padding:20px; width:250px; border-radius:10px; transition:0.3s; }
-.service-item:hover { transform:translateY(-5px); border-color:#ff4500; }
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
 
-/* Gallery */
-.gallery-items { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
-.gallery-items img { width:100%; max-width:300px; height:auto; border-radius:10px; cursor:pointer; transition:0.3s; }
-.gallery-items img:hover { transform:scale(1.05); }
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
 
-/* Contact Form */
-.contact form { display:flex; flex-direction:column; gap:15px; max-width:400px; margin:auto; }
-.contact form input, .contact form textarea { padding:10px; border:1px solid #ccc; border-radius:5px; width:100%; box-sizing:border-box; }
-.contact form button { padding:10px; border:none; background:#ff4500; color:#fff; border-radius:5px; cursor:pointer; transition:0.3s; }
-.contact form button:hover { background:#e03e00; }
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
 
-/* Footer */
-footer { background:#222; color:#fff; padding:20px 0; }
+.hero p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+}
 
-/* Lightbox */
-.lightbox { display:none; position:fixed; z-index:100; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center; }
-.lightbox-content { max-width:90%; max-height:80%; }
-.lightbox .close { position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer; }
+button, a.button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #1b4332;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-/* Responsif */
-@media (max-width:768px) {
-    header .container { flex-direction:column; }
-    header nav ul { flex-direction:column; gap:10px; margin-top:10px; }
-    .hero { height:300px; }
-    .service-item { width:100%; }
-    .gallery-items img { max-width:100%; }
+button:hover, a.button:hover {
+    background: #40916c;
 }
