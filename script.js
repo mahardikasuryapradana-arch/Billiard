@@ -16,24 +16,18 @@ galleryImgs.forEach(img => {
         lightboxImg.src = img.src;
     });
 });
-closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-lightbox.addEventListener('click', e => {
-    if(e.target === lightbox) lightbox.style.display = 'none';
-});
+closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
+lightbox.addEventListener('click', e => { if(e.target===lightbox) lightbox.style.display='none'; });
 
-// Smooth Scroll (optional, modern browsers)
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e){
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior:'smooth'
-        });
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
     });
 });
 
-// Booking Form Submission (Demo)
+// Booking Form Submission Demo
 const bookingForm = document.getElementById('bookingForm');
 bookingForm.addEventListener('submit', function(e){
     e.preventDefault();
