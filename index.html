@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle">🌙</button>
+
     <!-- Header / Navbar -->
     <header>
         <div class="container">
@@ -18,7 +21,7 @@
                     <li><a href="#about">Tentang Kami</a></li>
                     <li><a href="#services">Layanan</a></li>
                     <li><a href="#gallery">Galeri</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#contact">Booking</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,7 +50,7 @@
             <h2>Layanan Kami</h2>
             <div class="service-items">
                 <div class="service-item">
-                    <h3>Rental Meja Billiard</h3>
+                    <h3>Rental Meja</h3>
                     <p>Sewa meja billiard dengan tarif terjangkau per jam.</p>
                 </div>
                 <div class="service-item">
@@ -67,31 +70,40 @@
         <div class="container">
             <h2>Galeri</h2>
             <div class="gallery-items">
-                <img src="https://via.placeholder.com/300x200" alt="Billiard Table">
-                <img src="https://via.placeholder.com/300x200" alt="Interior Club">
-                <img src="https://via.placeholder.com/300x200" alt="Turnamen">
+                <img src="images/1.jpg" alt="Meja Billiard" class="gallery-img">
+                <img src="images/2.jpg" alt="Interior Club" class="gallery-img">
+                <img src="images/3.jpg" alt="Turnamen" class="gallery-img">
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact / Booking Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Kontak Kami</h2>
-            <form>
+            <h2>Booking Meja</h2>
+            <form id="bookingForm">
                 <input type="text" placeholder="Nama Anda" required>
                 <input type="email" placeholder="Email" required>
-                <textarea placeholder="Pesan" required></textarea>
-                <button type="submit">Kirim Pesan</button>
+                <input type="date" required>
+                <input type="time" required>
+                <textarea placeholder="Pesan / Permintaan Khusus" required></textarea>
+                <button type="submit">Kirim Booking</button>
             </form>
             <p>Email: billiardclub@example.com | Telepon: 0812-3456-7890</p>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Billiard Club. Semua Hak Dilindungi.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
