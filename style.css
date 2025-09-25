@@ -19,11 +19,15 @@ header .container {
     align-items: center;
     width: 90%;
     margin: auto;
+    flex-wrap: wrap;
 }
 header nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 header nav ul li a {
     color: #fff;
@@ -33,12 +37,13 @@ header nav ul li a {
 /* Hero */
 .hero {
     background: url('https://via.placeholder.com/1200x500') no-repeat center center/cover;
-    height: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     text-align: center;
+    padding: 20px;
 }
 .hero .btn {
     display: inline-block;
@@ -47,11 +52,12 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     margin-top: 20px;
+    border-radius: 5px;
 }
 
 /* Sections */
 section {
-    padding: 60px 0;
+    padding: 60px 20px;
     text-align: center;
 }
 section h2 {
@@ -70,6 +76,7 @@ section h2 {
     padding: 20px;
     width: 250px;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 /* Gallery */
@@ -80,8 +87,9 @@ section h2 {
     flex-wrap: wrap;
 }
 .gallery-items img {
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -98,6 +106,8 @@ section h2 {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 .contact form button {
     padding: 10px;
@@ -113,4 +123,31 @@ footer {
     background: #222;
     color: #fff;
     padding: 20px 0;
+}
+
+/* ================== */
+/* Responsif untuk HP */
+/* ================== */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+
+    .gallery-items img {
+        max-width: 100%;
+    }
 }
