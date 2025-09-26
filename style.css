@@ -1,58 +1,36 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #222;
-    margin: 0;
-    padding: 0;
+/* Default state (sembunyi) */
+.animate-fade,
+.animate-slide-left,
+.animate-slide-right {
+  opacity: 0;
+  transition: all 1s ease-out;
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    color: #0d1b2a;
+/* Saat muncul di layar */
+.animate-fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
+.animate-slide-left.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.75rem;
+.animate-slide-right.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+/* Animasi awal */
+.animate-fade {
+  transform: translateY(20px);
 }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #fff;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+.animate-slide-left {
+  transform: translateX(-40px);
 }
 
-.hero p {
-    font-size: 1.2rem;
-    color: #f1f1f1;
-}
-
-button, a.button {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: none;
-    background: #1b4332;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover, a.button:hover {
-    background: #40916c;
+.animate-slide-right {
+  transform: translateX(40px);
 }
