@@ -1,4 +1,3 @@
-
 /* Default state (sembunyi) */
 .animate-fade,
 .animate-slide-left,
@@ -35,5 +34,3 @@
 .animate-slide-right {
   transform: translateX(40px);
 }
-
-
